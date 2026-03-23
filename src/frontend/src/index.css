@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Cream/off-white background from logo: #FAF7F0 → oklch(0.975 0.012 88) */
+    --background: 0.975 0.012 88;
+    /* Near-black text: #1A1A1A → oklch(0.145 0 0) */
+    --foreground: 0.145 0 0;
+
+    /* Cards slightly whiter */
+    --card: 0.99 0.005 88;
+    --card-foreground: 0.145 0 0;
+
+    --popover: 0.99 0.005 88;
+    --popover-foreground: 0.145 0 0;
+
+    /* Primary = accent red-orange: #E8503A → oklch(0.595 0.2 28) */
+    --primary: 0.595 0.2 28;
+    --primary-foreground: 0.985 0 0;
+
+    --secondary: 0.93 0.018 88;
+    --secondary-foreground: 0.145 0 0;
+
+    --muted: 0.93 0.018 88;
+    --muted-foreground: 0.45 0.01 88;
+
+    --accent: 0.595 0.2 28;
+    --accent-foreground: 0.985 0 0;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.88 0.015 88;
+    --input: 0.88 0.015 88;
+    --ring: 0.595 0.2 28;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.975 0.012 88;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.595 0.2 28;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.93 0.018 88;
+    --sidebar-accent-foreground: 0.145 0 0;
+    --sidebar-border: 0.88 0.015 88;
+    --sidebar-ring: 0.595 0.2 28;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
